@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>            
+    <button onclick="darkModeToggle()" class="BotonPrincipal">Modo oscuro</button>
+    <div class="container">
+        <form id="registroForm">
+            <h2>Registro</h2>
+
+            <div class="input-group">
+                <input type="text" id="nombre" placeholder="Nombre completo" oninput="verificarNombre()">
+                <span id="error-nombre" class="error"></span>
+            </div>
+
+            <div class="input-group">
+                <input type="email" id="email" placeholder="Correo electrónico" oninput="verificarEmail()">
+                <span id="error-email" class="error"></span>
+            </div>
+
+            <div class="input-group">
+                <input type="password" id="password" placeholder="Contraseña" oninput="verificarContraseña()">
+                <span id="error-password" class="error"></span>
+            </div>
+
+            <div class="input-group">
+                <input type="password" id="confirmPassword" placeholder="Confirmar contraseña" oninput="verificarConfirmacion()">
+                <span id="error-confirmPassword" class="error"></span>
+            </div>
+
+            <button type="button" id="sendButton" onclick="verificarFormulario()">Confirmar</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
