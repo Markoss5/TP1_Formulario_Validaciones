@@ -7,9 +7,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>            
-    <button onclick="darkModeToggle()" class="BotonPrincipal">Modo oscuro</button>
     <div class="container">
-        <form id="registroForm">
+        <form id="registroForm" onsubmit="return verificarFormulario(event)">
             <h2>Registro</h2>
 
             <div class="input-group">
@@ -32,7 +31,7 @@
                 <span id="error-confirmPassword" class="error"></span>
             </div>
 
-            <button type="button" id="sendButton" onclick="verificarFormulario()">Confirmar</button>
+            <button type="submit" id="sendButton">Confirmar</button>
         </form>
     </div>
 
